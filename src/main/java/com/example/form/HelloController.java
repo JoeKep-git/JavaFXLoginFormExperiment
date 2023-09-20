@@ -2,6 +2,9 @@ package com.example.form;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.util.Optional;
 
 public class HelloController {
     @FXML
@@ -15,6 +18,9 @@ public class HelloController {
 
     @FXML
     private Button btnLogin;
+
+    @FXML
+    private Button btnCancel;
 
     String username = "Admin";
     String password = "Password";
@@ -44,5 +50,24 @@ public class HelloController {
             btnLogin.setDisable(false);
         else
             btnLogin.setDisable(true);
+    }
+
+    @FXML
+    protected void onClearClick() {
+        txtUserName.setText("");
+        txtPassword.setText("");
+        chkRemPassword.setSelected(false);
+        btnLogin.setDisable(true);
+    }
+
+    @FXML
+    protected void onCancelClick() {
+        Alert a = new Alert(Alert.AlertType.WARNING, "End?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> r = a.showAndWait();
+        if(r.isPresent() && r.get() == ButtonType.YES) {
+//            System.exit(0);
+            Stage stage = (Stage) btnCancel.getScene().getWindow();
+            stage.close();
+        }
     }
 }

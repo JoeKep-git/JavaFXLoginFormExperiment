@@ -16,17 +16,17 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button layoutX="343.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Clear">
+                  <Button layoutX="343.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#onClearClick" prefHeight="25.0" prefWidth="65.0" text="Clear">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="268.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Cancel">
+                  <Button fx:id="btnCancel" layoutX="268.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" onMouseClicked="#onCancelClick" text="Cancel">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnLogin" defaultButton="true" disable="true" layoutX="191.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Login">
+                  <Button fx:id="btnLogin" defaultButton="true" onMouseClicked="#onLoginClick" disable="true" layoutX="191.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Login">
                      <font>
                         <Font size="14.0" />
                      </font>
