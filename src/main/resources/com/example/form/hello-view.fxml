@@ -16,23 +16,23 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btnClear" layoutX="343.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Clear">
+                  <Button layoutX="343.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Clear">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCancel" layoutX="268.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Cancel">
+                  <Button layoutX="268.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Cancel">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnLogin" onAction="#onLoginClick" defaultButton="true" layoutX="191.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Login">
+                  <Button fx:id="btnLogin" defaultButton="true" disable="true" layoutX="191.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Login">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <TextField fx:id="txtUserName" layoutX="228.0" layoutY="78.0" prefHeight="0.0" prefWidth="147.0" />
-                  <PasswordField fx:id="txtPassword" layoutX="226.0" layoutY="132.0" />
+                  <TextField fx:id="txtUserName" layoutX="228.0" layoutY="78.0" onKeyPressed="#usrKeyPress" prefHeight="0.0" prefWidth="147.0" />
+                  <PasswordField fx:id="txtPassword" layoutX="226.0" layoutY="132.0" onKeyPressed="#passKeyPress" />
                   <Label layoutX="107.0" layoutY="71.0" prefHeight="39.0" prefWidth="112.0" text="User Name">
                      <font>
                         <Font size="22.0" />

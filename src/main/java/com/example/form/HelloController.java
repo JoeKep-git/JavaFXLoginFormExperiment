@@ -29,4 +29,20 @@ public class HelloController {
             a.showAndWait();
         }
     }
+
+    @FXML
+    protected void usrKeyPress() {
+        if(!txtPassword.getText().isEmpty() && !txtUserName.getText().isEmpty())
+            btnLogin.setDisable(false);
+        else
+            btnLogin.setDisable(true);
+    }
+
+    @FXML
+    protected void passKeyPress() {
+        if(!txtPassword.getText().isEmpty() && !txtUserName.getText().isEmpty())
+            btnLogin.setDisable(false);
+        else
+            btnLogin.setDisable(true);
+    }
 }
